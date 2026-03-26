@@ -2,15 +2,16 @@ public class OOPSBannerApp {
 
     public static void main(String[] args) {
 
-        String[] o = getOPattern();
-        String[] p = getPPattern();
-        String[] s = getSPattern();
+        String[] oPattern = getOPattern();
+        String[] pPattern = getPPattern();
+        String[] sPattern = getSPattern();
 
-        // Combine O O P S
         String[] banner = new String[7];
 
+        // Combine O O P S
         for (int i = 0; i < 7; i++) {
-            banner[i] = String.join("   ", o[i], o[i], p[i], s[i]);
+            banner[i] = String.join("   ",
+                    oPattern[i], oPattern[i], pPattern[i], sPattern[i]);
         }
 
         // Print banner
@@ -19,42 +20,45 @@ public class OOPSBannerApp {
         }
     }
 
-    // Method for O
+    // O pattern
     public static String[] getOPattern() {
         return new String[]{
-                "  *****  ",
-                " *     * ",
-                " *     * ",
-                " *     * ",
-                " *     * ",
-                " *     * ",
-                "  *****  "
+
+                String.join(" ", "  *****  "),
+                String.join(" ", " *     * "),
+                String.join(" ", " *     * "),
+                String.join(" ", " *     * "),
+                String.join(" ", " *     * "),
+                String.join(" ", " *     * "),
+                String.join(" ", "  *****  ")
         };
     }
 
-    // Method for P
+    // P pattern
     public static String[] getPPattern() {
         return new String[]{
-                " ******  ",
-                " *     * ",
-                " *     * ",
-                " ******  ",
-                " *       ",
-                " *       ",
-                " *       "
+
+                String.join(" ", " ******  "),
+                String.join(" ", " *     * "),
+                String.join(" ", " *     * "),
+                String.join(" ", " ******  "),
+                String.join(" ", " *       "),
+                String.join(" ", " *       "),
+                String.join(" ", " *       ")
         };
     }
 
-    // Method for S
+    // S pattern
     public static String[] getSPattern() {
         return new String[]{
-                "  *****  ",
-                " *       ",
-                " *       ",
-                "  *****  ",
-                "       * ",
-                "       * ",
-                "  *****  "
+
+                String.join(" ", "  *****  "),
+                String.join(" ", " *       "),
+                String.join(" ", " *       "),
+                String.join(" ", "  *****  "),
+                String.join(" ", "       * "),
+                String.join(" ", "       * "),
+                String.join(" ", "  *****  ")
         };
     }
 }
